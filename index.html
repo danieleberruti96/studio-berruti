@@ -68,6 +68,16 @@ background:rgba(0,0,0,0.35);
 padding:50px;
 border-radius:16px;
 backdrop-filter: blur(8px);
+
+/* ANIMAZIONE */
+opacity:0;
+transform:translateY(30px);
+animation:fadeUp 1s ease forwards;
+}
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
 }
 
 .logo-top{
@@ -108,21 +118,26 @@ font-size:16px;
 transition:0.3s;
 }
 
-/* Chiama */
-.btn:first-of-type{
+.chiama{
 background:#0ea5e9;
 }
 
-/* WhatsApp */
-.btn:last-of-type{
+.whatsapp{
 background:#25D366;
 }
 
-/* Effetto hover */
+/* effetto hover */
 .btn:hover{
 transform:scale(1.05);
 opacity:0.9;
 }
+
+/* effetto click */
+.btn:active{
+transform:scale(0.95);
+}
+
+
 
 /* GRIGLIA */
 .grid{
@@ -196,8 +211,15 @@ margin:0 5px;
 color:white;
 text-decoration:none;
 font-weight:bold;
+transition:0.2s;    
+}
+.fixed-bar a:active{
+transform:scale(0.95);
 }
 
+.fixed-bar a:hover{
+opacity:0.85;
+}
 /* Chiama */
 .fixed-bar a:first-child{
 background:#0ea5e9;
@@ -300,10 +322,9 @@ Tecnologia avanzata e diagnosi precisa per trattamenti efficaci.
 <footer>
 © Studio Dentistico Berruti
 </footer>
-
 <div class="fixed-bar">
 <a href="tel:0812132370">📞 Chiama</a>
-<a href="https://wa.me/393495000019">💬 WhatsApp</a>
+<a href="https://wa.me/393495000019">🟢 WhatsApp</a>
 </div>
 
 </body>
