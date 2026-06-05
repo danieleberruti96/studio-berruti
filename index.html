@@ -11,8 +11,28 @@ margin:0;
 font-family:Arial, sans-serif;
 color:#1f2937;
 scroll-behavior:smooth;
+position:relative;
 }
 
+/* LOGO SFONDO */
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background-image: url("https://i.postimg.cc/50jt7NHd/DDCB61E7-85F7-4151-A2BE-DE45D729768C.png");
+background-repeat:no-repeat;
+background-position:center;
+background-size:500px;
+
+opacity:0.05; /* 🔥 QUI REGOLI VISIBILITÀ */
+
+pointer-events:none;
+z-index:-1;
+}
 /* HEADER */
 .header{
 position:fixed;
