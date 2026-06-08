@@ -7,7 +7,7 @@
 
 <title>Dentista San Giorgio a Cremano | Studio Dentistico Berruti</title>
 
-<meta name="description" content="Studio Dentistico Berruti a San Giorgio a Cremano. Implantologia, ortodonzia, igiene dentale e medicina estetica. Prenota ora la tua visita.">
+<meta name="description" content="Studio Dentistico Berruti a San Giorgio a Cremano. 53 recensioni ⭐⭐⭐⭐⭐. Implantologia, ortodonzia e igiene dentale. Prenota ora.">
 
 <link rel="icon" href="https://i.postimg.cc/50jt7NHd/DDCB61E7-85F7-4151-A2BE-DE45D729768C.png">
 
@@ -17,7 +17,6 @@ body{
 margin:0;
 font-family:Arial, sans-serif;
 color:#1f2937;
-background:white;
 }
 
 /* HERO */
@@ -29,25 +28,25 @@ align-items:center;
 justify-content:center;
 text-align:center;
 padding:20px;
-animation:fadeIn 1.2s ease;
+animation:fadeIn 1s ease;
 }
 
-.logo-hero{
-width:420px;
+.logo{
+width:380px;
 max-width:85%;
 }
 
-.hero h1{
-margin-top:20px;
+h1{
 font-size:32px;
+margin-top:20px;
 }
 
 .hero p{
 color:#6b7280;
-margin:10px 0;
 }
 
-.cta-hero{
+/* CTA */
+.cta{
 margin-top:20px;
 background:#25D366;
 color:white;
@@ -55,7 +54,6 @@ padding:16px 36px;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
-font-size:16px;
 box-shadow:0 10px 25px rgba(37,211,102,0.4);
 }
 
@@ -64,7 +62,6 @@ box-shadow:0 10px 25px rgba(37,211,102,0.4);
 margin-top:-30px;
 text-align:center;
 }
-
 .badge span{
 background:white;
 padding:10px 20px;
@@ -76,6 +73,14 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 .section{
 padding:90px 20px;
 text-align:center;
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+.section.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 .light{
@@ -93,55 +98,62 @@ margin:auto;
 
 /* CARD */
 .card{
-background:white;
 padding:30px;
 border-radius:20px;
 box-shadow:0 15px 40px rgba(0,0,0,0.08);
 transition:0.3s;
+background:white;
 }
-
 .card:hover{
 transform:translateY(-8px);
 }
 
-/* RECENSIONI */
+/* RECENSIONI SLIDER */
+.slider{
+overflow:hidden;
+margin-top:20px;
+}
+
+.slider-track{
+display:flex;
+gap:20px;
+animation:scroll 30s linear infinite;
+}
+
 .review{
+min-width:300px;
 background:white;
 padding:25px;
 border-radius:20px;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
 text-align:left;
-line-height:1.6;
-transition:0.3s;
 }
 
-.review:hover{
-transform:translateY(-6px);
-}
-
-/* STELLE */
 .stars{
 color:#facc15;
-font-size:18px;
 margin:8px 0;
 }
 
-/* CTA */
-.cta{
+@keyframes scroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+/* CTA FINALE */
+.cta-section{
 background:#0ea5e9;
 color:white;
 padding:80px 20px;
 }
-
-.cta a{
-display:inline-block;
-margin-top:20px;
+.cta-section a{
 background:white;
 color:#0ea5e9;
-padding:16px 32px;
+padding:16px 30px;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
+display:inline-block;
+margin-top:20px;
 }
 
 /* MAPPA */
@@ -152,50 +164,44 @@ border:0;
 border-radius:12px;
 }
 
-/* FOOTER */
-footer{
-background:#0f172a;
+/* WHATSAPP FLOAT */
+.whatsapp{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#25D366;
 color:white;
-padding:25px;
-text-align:center;
+padding:16px;
+border-radius:50%;
+text-decoration:none;
+font-size:22px;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
 /* BARRA */
-.fixed-bar{
+.bar{
 position:fixed;
 bottom:0;
 width:100%;
-background:white;
 display:flex;
-padding:12px;
-z-index:1000;
-box-shadow:0 -2px 10px rgba(0,0,0,0.1);
 }
 
-.fixed-bar a{
+.bar a{
 flex:1;
+padding:15px;
 text-align:center;
-padding:12px;
-border-radius:20px;
-margin:0 5px;
 color:white;
 text-decoration:none;
 font-weight:bold;
 }
 
 .call{background:#0ea5e9;}
-.wa{background:#25D366; animation:pulse 2s infinite;}
+.wa{background:#25D366;}
 .ig{background:#E1306C;}
 
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.08);}
-100%{transform:scale(1);}
-}
-
 @keyframes fadeIn{
-from{opacity:0; transform:translateY(20px);}
-to{opacity:1; transform:translateY(0);}
+from{opacity:0;}
+to{opacity:1;}
 }
 
 </style>
@@ -206,14 +212,14 @@ to{opacity:1; transform:translateY(0);}
 <!-- HERO -->
 <div class="hero">
 
-<img src="https://i.postimg.cc/50jt7NHd/DDCB61E7-85F7-4151-A2BE-DE45D729768C.png" class="logo-hero">
+<img src="https://i.postimg.cc/50jt7NHd/DDCB61E7-85F7-4151-A2BE-DE45D729768C.png" class="logo">
 
 <h1>Studio Dentistico Berruti</h1>
 
 <p>Dentista a San Giorgio a Cremano</p>
 <p>⭐ 53 recensioni reali su Google</p>
 
-<a href="https://wa.me/393495000019?text=Ciao%20vorrei%20prenotare%20una%20prima%20visita" class="cta-hero">
+<a href="https://wa.me/393495000019?text=Vorrei prenotare una visita" class="cta">
 Prenota la tua prima visita
 </a>
 
@@ -228,63 +234,59 @@ Prenota la tua prima visita
 <h2>I nostri servizi</h2>
 
 <div class="grid">
-<div class="card"><b>Implantologia</b><br>Soluzioni avanzate</div>
-<div class="card"><b>Ortodonzia</b><br>Allineamento dentale</div>
-<div class="card"><b>Igiene dentale</b><br>Prevenzione completa</div>
-<div class="card"><b>Estetica dentale</b><br>Sorriso naturale</div>
-<div class="card"><b>Sbiancamento</b><br>Denti luminosi</div>
-<div class="card"><b>Medicina estetica</b><br>Trattamenti viso</div>
+<div class="card">Implantologia</div>
+<div class="card">Ortodonzia</div>
+<div class="card">Igiene dentale</div>
+<div class="card">Estetica dentale</div>
+<div class="card">Sbiancamento</div>
+<div class="card">Medicina estetica</div>
 </div>
+
 </div>
 
 <!-- RECENSIONI -->
 <div class="section light">
+<h2>Recensioni pazienti</h2>
 
-<h2>Recensioni dei pazienti</h2>
-
-<a href="https://www.google.com/search?q=Studio+Dentistico+Berruti+recensioni" target="_blank"
-style="display:inline-block; margin:15px; background:#0ea5e9; color:white; padding:12px 25px; border-radius:30px;">
-Leggi tutte le recensioni su Google
+<a href="https://www.google.com/search?q=Studio+Dentistico+Berruti+recensioni" target="_blank">
+Leggi tutte le recensioni
 </a>
 
-<div class="grid">
+<div class="slider">
+<div class="slider-track">
 
 <div class="review">
 <b>Mattia Esposito</b>
 <div class="stars">★★★★★</div>
-Mi reco in questo studio da molti anni e mi sono trovato benissimo. Studio molto pulito e curato nei dettagli.
+Studio eccellente, professionalità e pulizia impeccabile.
 </div>
 
 <div class="review">
 <b>Virginia Petagna</b>
 <div class="stars">★★★★★</div>
-Professionisti seri, precisi ed umani. Frequento lo studio da oltre 20 anni.
+Precisi, umani e disponibili. Consigliatissimo.
 </div>
 
 <div class="review">
 <b>Giovanni Mellino</b>
 <div class="stars">★★★★★</div>
-Professionalità, cordialità, disponibilità e studio all’avanguardia.
-</div>
-
-<div class="review">
-<b>Maurizio Ristaldi</b>
-<div class="stars">★★★★★</div>
-Medici con dedizione e umanità. Lo Studio Berruti ne è la prova.
+All’avanguardia e molto professionali.
 </div>
 
 <div class="review">
 <b>Raffaella Assediato</b>
 <div class="stars">★★★★★</div>
-Professionalità, gentilezza e disponibilità. Siete insostituibili.
+Gentilezza e competenza ai massimi livelli.
 </div>
 
+<!-- duplicazione -->
 <div class="review">
-<b>Agnese Puca</b>
+<b>Mattia Esposito</b>
 <div class="stars">★★★★★</div>
-Competenza ai massimi livelli. Ambiente pulito e curato.
+Studio eccellente, professionalità e pulizia impeccabile.
 </div>
 
+</div>
 </div>
 
 </div>
@@ -292,23 +294,21 @@ Competenza ai massimi livelli. Ambiente pulito e curato.
 <!-- CONTATTI -->
 <div class="section">
 <h2>Contatti</h2>
-
 <p>
 📍 Via Pittore 117<br>
 📞 081 213 2370<br>
 📱 349 5000019
 </p>
-
 </div>
 
 <!-- MAPPA -->
 <div class="section light">
-<h2>Dove Siamo</h2>
+<h2>Dove siamo</h2>
 <iframe src="https://maps.google.com/maps?q=Studio%20Dentistico%20Berruti&output=embed"></iframe>
 </div>
 
 <!-- CTA -->
-<div class="cta">
+<div class="cta-section">
 <h2>Prenota la tua visita</h2>
 <a href="https://wa.me/393495000019">Prenota su WhatsApp</a>
 </div>
@@ -317,12 +317,30 @@ Competenza ai massimi livelli. Ambiente pulito e curato.
 © Studio Dentistico Berruti
 </footer>
 
+<!-- FLOAT -->
+<a href="https://wa.me/393495000019" class="whatsapp">💬</a>
+
 <!-- BARRA -->
-<div class="fixed-bar">
+<div class="bar">
 <a href="tel:0812132370" class="call">Chiama</a>
 <a href="https://wa.me/393495000019" class="wa">WhatsApp</a>
 <a href="https://www.instagram.com/studio_dentistico_berruti" class="ig">Instagram</a>
 </div>
+
+<script>
+
+/* animazioni scroll */
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+sections.forEach(sec => {
+if(sec.getBoundingClientRect().top < window.innerHeight - 100){
+sec.classList.add('visible');
+}
+});
+});
+
+</script>
 
 </body>
 </html>
