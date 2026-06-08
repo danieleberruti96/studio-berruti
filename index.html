@@ -4,16 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Studio Dentistico Berruti</title>
+
 <style>
 body{
 margin:0;
 font-family:Arial, sans-serif;
 color:#1f2937;
 scroll-behavior:smooth;
-position:relative;
+background:white;
 }
-
-/* LOGO SFONDO */
 
 /* HEADER */
 .header{
@@ -26,7 +25,6 @@ padding:10px 15px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-sizing:border-box;
 z-index:1000;
 }
 
@@ -34,6 +32,7 @@ z-index:1000;
 display:flex;
 gap:10px;
 }
+
 .header img{
 height:40px;
 }
@@ -46,34 +45,38 @@ padding:8px 14px;
 border-radius:20px;
 font-size:14px;
 }
-.header a:first-child{
-    background:#0ea5e9; /* Chiama */
+
+.header a:nth-child(1){
+background:#0ea5e9;
 }
 
-.header a:last-child{
-    background:#25D366; /* WhatsApp verde */
+.header a:nth-child(2){
+background:#25D366;
 }
+
+.header a:nth-child(3){
+background:#E1306C;
+}
+
 /* HERO */
 .hero{
 height:100vh;
-background: url("https://i.postimg.cc/50jt7NHd/DDCB61E7-85F7-4151-A2BE-DE45D729768C.png") center center no-repeat;
-background-size: 800px;
-}
-/* ANIMAZIONE */
-
-.logo-top{
-width:120px;
-margin-bottom:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:white;
+padding-top:60px;
 }
 
-h1{
-font-size:50px;
-margin:0;
+.logo-hero{
+width:450px;
+max-width:85%;
+animation:fadeIn 1s ease;
 }
 
-.subtitle{
-font-size:18px;
-margin-top:10px;
+@keyframes fadeIn{
+from{opacity:0; transform:scale(0.95);}
+to{opacity:1; transform:scale(1);}
 }
 
 /* SEZIONI */
@@ -98,35 +101,34 @@ font-weight:bold;
 font-size:16px;
 transition:0.3s;
 }
+
 .prenota{
 background:#0ea5e9;
 font-size:18px;
 padding:16px 32px;
 box-shadow:0 10px 25px rgba(14,165,233,0.4);
-}
-.chiama{
-background:#0ea5e9;
+animation:pulse 2s infinite;
 }
 
-.whatsapp{
-background:#25D366;
-}
-
-/* effetto hover */
 .btn:hover{
 transform:scale(1.05);
 opacity:0.9;
 }
+
 .prenota:hover{
 transform:scale(1.08);
 box-shadow:0 15px 30px rgba(14,165,233,0.6);
 }
-/* effetto click */
+
 .btn:active{
 transform:scale(0.95);
 }
 
-
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+}
 
 /* GRIGLIA */
 .grid{
@@ -145,13 +147,6 @@ border-radius:15px;
 box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* IMMAGINI */
-.img-box img{
-width:100%;
-border-radius:15px;
-height:auto;
-}
-
 /* RECENSIONI */
 .review{
 background:white;
@@ -159,6 +154,12 @@ padding:20px;
 border-radius:12px;
 box-shadow:0 6px 20px rgba(0,0,0,0.1);
 text-align:left;
+}
+
+/* IMMAGINI */
+.img-box img{
+width:100%;
+border-radius:15px;
 }
 
 /* MAPPA */
@@ -178,14 +179,12 @@ text-align:center;
 }
 
 /* BARRA FISSA */
-/* BARRA FISSA */
 .fixed-bar{
 position:fixed;
 bottom:0;
 width:100%;
 background:white;
 display:flex;
-justify-content:space-around;
 padding:12px;
 z-index:1000;
 box-shadow:0 -2px 10px rgba(0,0,0,0.1);
@@ -194,38 +193,24 @@ box-shadow:0 -2px 10px rgba(0,0,0,0.1);
 .fixed-bar a{
 flex:1;
 text-align:center;
-padding:10px;
+padding:12px;
 border-radius:20px;
 margin:0 5px;
 color:white;
 text-decoration:none;
 font-weight:bold;
-transition:0.2s;    
-}
-.fixed-bar a:active{
-transform:scale(0.95);
 }
 
-.fixed-bar a:hover{
-opacity:0.85;
-}
-/* Chiama */
-.fixed-bar a:first-child{
+.fixed-bar a:nth-child(1){
 background:#0ea5e9;
 }
 
-/* WhatsApp */
-.fixed-bar a:last-child{
+.fixed-bar a:nth-child(2){
 background:#25D366;
 }
-.prenota{
-animation:pulse 2s infinite;
-}
 
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.05);}
-100%{transform:scale(1);}
+.fixed-bar a:nth-child(3){
+background:#E1306C;
 }
 </style>
 
@@ -235,15 +220,20 @@ animation:pulse 2s infinite;
 
 <!-- HEADER -->
 <div class="header">
-  <img src="https://i.postimg.cc/50jt7NHd/DDCB61E7-85F7-4151-A2BE-DE45D729768C.png">
+<img src="https://i.postimg.cc/50jt7NHd/DDCB61E7-85F7-4151-A2BE-DE45D729768C.png">
 
-  <div>
-    <a href="tel:0812132370">Chiama</a>
-    <a href="https://wa.me/393495000019">WhatsApp</a>
-  </div>
+<div>
+<a href="tel:0812132370">Chiama</a>
+<a href="https://wa.me/393495000019">WhatsApp</a>
+<a href="https://www.instagram.com/studio_dentistico_berruti" target="_blank">Instagram</a>
 </div>
+</div>
+
 <!-- HERO -->
-<div class="hero"></div>
+<div class="hero">
+<img src="https://i.postimg.cc/50jt7NHd/DDCB61E7-85F7-4151-A2BE-DE45D729768C.png" class="logo-hero">
+</div>
+
 <!-- TEAM -->
 <div class="section light">
 <h2>Il nostro team</h2>
@@ -259,19 +249,15 @@ Un team di professionisti dedicati alla salute e al benessere del paziente.
 </p>
 </div>
 
-<!-- APPROCCIO -->
+<!-- RECENSIONI -->
 <div class="section">
-<h2>Approccio Clinico</h2>
+<h2>Cosa dicono i nostri pazienti</h2>
 
 <div class="grid">
-<div class="img-box">
-<img src="https://i.postimg.cc/1t4zC58L/1396C114-87D8-4ADC-9A39-A6B2446DD69A.png">
+<div class="review">⭐⭐⭐⭐⭐<br>Professionalità e cortesia impeccabili.</div>
+<div class="review">⭐⭐⭐⭐⭐<br>Studio moderno e staff gentilissimo.</div>
+<div class="review">⭐⭐⭐⭐⭐<br>Mi sono sentito subito a mio agio.</div>
 </div>
-</div>
-
-<p style="max-width:700px;margin:20px auto;">
-Tecnologia avanzata e diagnosi precisa per trattamenti efficaci.
-</p>
 </div>
 
 <!-- SERVIZI -->
@@ -291,7 +277,6 @@ Tecnologia avanzata e diagnosi precisa per trattamenti efficaci.
 <!-- MAPPA -->
 <div class="section light">
 <h2>Dove Siamo</h2>
-
 <iframe src="https://maps.google.com/maps?q=Studio%20Dentistico%20Berruti&output=embed"></iframe>
 </div>
 
@@ -302,19 +287,17 @@ Tecnologia avanzata e diagnosi precisa per trattamenti efficaci.
 <p>0812132370 | 3495000019</p>
 
 <a class="btn prenota" href="tel:0812132370">📞 Prenota Ora</a>
+</div>
+
 <footer>
-    
 © Studio Dentistico Berruti
 </footer>
+
+<!-- BARRA FISSA -->
 <div class="fixed-bar">
-<a href="tel:0812132370">
-<img src="https://cdn-icons-png.flaticon.com/512/159/159832.png" style="height:20px; vertical-align:middle; margin-right:5px;">
-Chiama
-</a>
-<a href="https://wa.me/393495000019">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="height:20px; vertical-align:middle; margin-right:5px;">
-WhatsApp
-</a>
+<a href="tel:0812132370">📞 Chiama</a>
+<a href="https://wa.me/393495000019">🟢 WhatsApp</a>
+<a href="https://www.instagram.com/studio_dentistico_berruti" target="_blank">📸 Instagram</a>
 </div>
 
 </body>
