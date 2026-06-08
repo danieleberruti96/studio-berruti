@@ -72,6 +72,19 @@ font-weight:bold;
 display:inline-block;
 }
 
+/* badge recensioni */
+.badge{
+margin-top:-30px;
+text-align:center;
+}
+
+.badge span{
+background:white;
+padding:10px 20px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
 /* SEZIONI */
 .section{
 padding:80px 20px;
@@ -91,7 +104,7 @@ max-width:1000px;
 margin:auto;
 }
 
-/* CARD PREMIUM */
+/* CARD */
 .card{
 background:white;
 padding:25px;
@@ -110,14 +123,13 @@ width:100%;
 border-radius:15px;
 }
 
-/* RECENSIONI */
+/* RECENSIONI (PRONTE PER REALI) */
 .review{
 background:white;
 padding:20px;
-border-radius:12px;
-box-shadow:0 6px 20px rgba(0,0,0,0.1);
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 text-align:left;
-font-size:15px;
 }
 
 /* CTA */
@@ -181,10 +193,6 @@ margin:0 5px;
 color:white;
 text-decoration:none;
 font-weight:bold;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:8px;
 }
 
 .call{background:#0ea5e9;}
@@ -195,8 +203,6 @@ animation:pulse 2s infinite;
 }
 
 .ig{background:#E1306C;}
-
-.fixed-bar img{height:20px;}
 
 @keyframes pulse{
 0%{transform:scale(1);}
@@ -219,10 +225,14 @@ animation:pulse 2s infinite;
 <p>Dentista a San Giorgio a Cremano • 53 recensioni ⭐⭐⭐⭐⭐</p>
 <p style="font-size:14px;">Studio tra i più recensiti della zona</p>
 
-<a href="https://wa.me/393495000019?text=Ciao%20vorrei%20prenotare%20una%20visita" class="cta-hero">
-Prenota su WhatsApp
+<a href="https://wa.me/393495000019?text=Ciao%20vorrei%20prenotare%20una%20prima%20visita" class="cta-hero">
+Prenota la tua prima visita
 </a>
 
+</div>
+
+<div class="badge">
+<span>⭐ 53 recensioni verificate su Google</span>
 </div>
 
 <!-- PRIMA VISITA -->
@@ -235,7 +245,7 @@ Valutazione completa del tuo sorriso con piano di trattamento personalizzato.
 </p>
 
 <a href="https://wa.me/393495000019?text=Ciao%20vorrei%20prenotare%20una%20prima%20visita"
-style="margin-top:20px; display:inline-block; background:#25D366; color:white; padding:14px 30px; border-radius:30px; text-decoration:none; font-weight:bold;">
+style="margin-top:20px; display:inline-block; background:#25D366; color:white; padding:14px 30px; border-radius:30px;">
 Prenota la tua prima visita
 </a>
 
@@ -266,44 +276,22 @@ Prenota la tua prima visita
 </div>
 </div>
 
-<!-- PROBLEMI -->
+<!-- RECENSIONI VERE -->
 <div class="section light">
 
-<h2>Hai uno di questi problemi?</h2>
-
-<div class="grid">
-<div class="card">Denti mancanti o mobili</div>
-<div class="card">Denti storti o disallineati</div>
-<div class="card">Macchie o denti ingialliti</div>
-<div class="card">Dolore o fastidio ai denti</div>
-</div>
-
-<p style="margin-top:20px;">Abbiamo la soluzione adatta a te.</p>
-
-</div>
-
-<!-- TEAM -->
-<div class="section">
-<h2>Il nostro team</h2>
-
-<div class="grid">
-<div class="img-box">
-<img src="https://i.postimg.cc/HxjLZsJ1/574C95F2-D707-4B16-AEF3-AB42E9CD72C5.png">
-</div>
-</div>
-</div>
-
-<!-- RECENSIONI -->
-<div class="section light">
 <h2>Recensioni dei pazienti</h2>
 
-<div class="grid">
+<p>⭐ 53 recensioni su Google</p>
 
-<div class="review"><b>Giuseppe A.</b><br>⭐⭐⭐⭐⭐<br>Studio eccellente</div>
-<div class="review"><b>Maria L.</b><br>⭐⭐⭐⭐⭐<br>Esperienza positiva</div>
-<div class="review"><b>Antonio R.</b><br>⭐⭐⭐⭐⭐<br>Consigliato</div>
+<a href="INSERISCI_LINK_GOOGLE" target="_blank"
+style="display:inline-block; margin:15px; background:#0ea5e9; color:white; padding:12px 25px; border-radius:30px;">
+Leggi tutte le recensioni
+</a>
 
+<div class="grid" id="recensioni">
+<!-- QUI INCOLLEREMO LE RECENSIONI REALI -->
 </div>
+
 </div>
 
 <!-- CONTATTI -->
@@ -336,11 +324,9 @@ Prenota la tua prima visita
 
 <!-- BARRA -->
 <div class="fixed-bar">
-
 <a href="tel:0812132370" class="call">Chiama</a>
 <a href="https://wa.me/393495000019" class="wa">WhatsApp</a>
 <a href="https://www.instagram.com/studio_dentistico_berruti" class="ig">Instagram</a>
-
 </div>
 
 </body>
