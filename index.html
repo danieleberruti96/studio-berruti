@@ -1,4 +1,43 @@
-/* HERO PREMIUM DEFINITIVO */
+<!DOCTYPE html>
+<html lang="it">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dentista San Giorgio a Cremano | Studio Dentistico Berruti</title>
+
+<meta name="description" content="Studio Dentistico Berruti a San Giorgio a Cremano. 53 recensioni ⭐⭐⭐⭐⭐. Implantologia, ortodonzia e igiene dentale. Prenota ora.">
+
+<link rel="icon" href="https://i.postimg.cc/50jt7NHd/DDCB61E7-85F7-4151-A2BE-DE45D729768C.png">
+
+<!-- SEO LOCALE -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Dentist",
+ "name": "Studio Dentistico Berruti",
+ "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "Via Pittore 117",
+   "addressLocality": "San Giorgio a Cremano",
+   "addressRegion": "NA",
+   "addressCountry": "IT"
+ },
+ "telephone": "+390812132370"
+}
+</script>
+
+<style>
+
+body{
+margin:0;
+font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+color:#1f2937;
+line-height:1.5;
+}
+
+/* HERO (ORA COERENTE E PULITO) */
 .hero{
 height:100vh;
 display:flex;
@@ -7,42 +46,333 @@ align-items:center;
 justify-content:center;
 text-align:center;
 padding:20px;
-
 background: linear-gradient(180deg,#f7fbff 0%, #ffffff 100%);
 color:#1f2937;
 }
 
-/* titolo */
-h1{
-font-size:clamp(28px,5vw,42px);
-font-weight:700;
-margin-bottom:10px;
+.logo{
+width:340px;
+max-width:80%;
 }
 
-/* sottotitoli */
+h1{
+font-size:clamp(26px,5vw,38px);
+margin-top:20px;
+font-weight:600;
+}
+
 .hero p{
 color:#4b5563;
-font-size:clamp(15px,2.5vw,18px);
+font-size:clamp(14px,2.5vw,17px);
 margin:6px 0;
-max-width:500px;
 }
 
-/* CTA PREMIUM */
+/* CTA */
 .cta{
-margin-top:30px;
+margin-top:25px;
 background:#25D366;
 color:white;
-padding:18px 38px;
-border-radius:40px;
+padding:16px 34px;
+border-radius:30px;
 text-decoration:none;
-font-weight:700;
-font-size:16px;
-
-box-shadow:0 10px 25px rgba(37,211,102,0.35);
-transition:0.3s;
+font-weight:600;
+box-shadow:0 8px 20px rgba(37,211,102,0.35);
+transition:0.25s;
 }
 
 .cta:hover{
-transform:scale(1.06);
-box-shadow:0 15px 35px rgba(37,211,102,0.45);
+transform:scale(1.05);
 }
+
+/* BADGE */
+.badge{
+margin-top:-30px;
+text-align:center;
+}
+.badge span{
+background:white;
+padding:10px 20px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+font-size:14px;
+}
+
+/* SEZIONI */
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.light{
+background:#f7fbff;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+max-width:1100px;
+margin:auto;
+}
+
+/* CARD */
+.card{
+padding:28px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,0.06);
+background:white;
+transition:0.25s;
+font-size:15px;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+/* RECENSIONI */
+.review{
+min-width:280px;
+background:white;
+padding:22px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,0.06);
+text-align:left;
+line-height:1.6;
+}
+
+.stars{
+color:#facc15;
+margin:6px 0;
+font-size:14px;
+}
+
+/* SLIDER */
+.slider{
+overflow:hidden;
+margin-top:25px;
+}
+
+.slider-track{
+display:flex;
+gap:20px;
+animation:scroll 30s linear infinite;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+/* CTA FINALE (MIGLIORATA) */
+.cta-section{
+background:#0ea5e9;
+color:white;
+padding:80px 20px;
+}
+
+.cta-section p{
+max-width:600px;
+margin:auto;
+}
+
+.cta-section .info{
+margin-top:20px;
+line-height:1.6;
+}
+
+/* MAPPA */
+iframe{
+width:100%;
+height:260px;
+border:0;
+border-radius:12px;
+}
+
+/* FLOAT */
+.whatsapp{
+position:fixed;
+bottom:90px;
+right:15px;
+background:#25D366;
+color:white;
+padding:14px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* BARRA */
+.bar{
+position:fixed;
+bottom:0;
+width:100%;
+display:flex;
+}
+
+.bar a{
+flex:1;
+padding:12px;
+text-align:center;
+color:white;
+text-decoration:none;
+font-weight:600;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:6px;
+font-size:14px;
+}
+
+.bar img{
+height:18px;
+}
+
+.call{background:#0ea5e9;}
+.wa{background:#25D366;}
+.ig{background:#E1306C;}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+
+<img src="https://i.postimg.cc/50jt7NHd/DDCB61E7-85F7-4151-A2BE-DE45D729768C.png" class="logo">
+
+<h1>Studio Dentistico Berruti</h1>
+
+<p><b>Sorrisi sani, naturali e duraturi</b></p>
+<p>⭐ 53 recensioni reali su Google • Tra i più recensiti a San Giorgio</p>
+
+<a href="https://wa.me/393495000019?text=Ciao,%20vorrei%20prenotare%20una%20visita%20presso%20lo%20Studio%20Dentistico%20Berruti" class="cta">
+Prenota la tua prima visita
+</a>
+
+</div>
+
+<div class="badge">
+<span>⭐ Recensioni verificate su Google</span>
+</div>
+
+<!-- SERVIZI -->
+<div class="section">
+<h2>Come possiamo aiutarti</h2>
+
+<div class="grid">
+<div class="card"><b>Implantologia</b><br>Sostituiamo denti mancanti</div>
+<div class="card"><b>Ortodonzia</b><br>Allineiamo il tuo sorriso</div>
+<div class="card"><b>Igiene dentale</b><br>Prevenzione e cura</div>
+<div class="card"><b>Estetica dentale</b><br>Migliora il sorriso</div>
+<div class="card"><b>Sbiancamento</b><br>Denti più bianchi</div>
+<div class="card"><b>Medicina estetica</b><br>Valorizza il viso</div>
+</div>
+
+</div>
+
+<!-- SEO ZONA -->
+<div class="section">
+<h2>Dentista a San Giorgio a Cremano</h2>
+
+<p style="max-width:700px;margin:auto;">
+Lo Studio Dentistico Berruti è un punto di riferimento a San Giorgio a Cremano.
+Riceviamo pazienti anche da Portici, Ercolano e Napoli.
+</p>
+
+</div>
+
+<!-- RECENSIONI -->
+<div class="section light">
+<h2>Recensioni pazienti</h2>
+
+<p>
+<a href="https://www.google.com/search?q=Studio+Dentistico+Berruti+recensioni" target="_blank"
+style="background:#0ea5e9;color:white;padding:10px 20px;border-radius:20px;text-decoration:none;font-weight:bold;">
+Leggi tutte le recensioni su Google
+</a>
+</p>
+
+<div class="slider">
+<div class="slider-track">
+
+<div class="review">
+<b>Mattia Esposito</b>
+<div class="stars">★★★★★</div>
+Studio eccellente, professionalità e pulizia impeccabile.
+</div>
+
+<div class="review">
+<b>Virginia Petagna</b>
+<div class="stars">★★★★★</div>
+Precisi, umani e disponibili.
+</div>
+
+<div class="review">
+<b>Giovanni Mellino</b>
+<div class="stars">★★★★★</div>
+All’avanguardia e molto professionali.
+</div>
+
+</div>
+</div>
+
+</div>
+
+<!-- CONTATTI -->
+<div class="section">
+<h2>Contatti</h2>
+<p>
+📍 Via Pittore 117<br>
+📞 081 213 2370<br>
+📱 349 5000019
+</p>
+</div>
+
+<!-- MAPPA -->
+<div class="section light">
+<h2>Dove siamo</h2>
+<iframe src="https://maps.google.com/maps?q=Studio%20Dentistico%20Berruti&output=embed"></iframe>
+</div>
+
+<!-- CTA FINALE MIGLIORATA -->
+<div class="cta-section">
+<h2>Studio Dentistico Berruti</h2>
+
+<p>
+Ci prendiamo cura del tuo sorriso con professionalità, attenzione e tecnologie moderne.
+</p>
+
+<div class="info">
+📍 Via Pittore 117<br>
+📞 081 213 2370<br>
+🕒 Riceviamo su appuntamento
+</div>
+
+</div>
+
+<footer>
+© Studio Dentistico Berruti
+</footer>
+
+<a href="https://wa.me/393495000019?text=Ciao,%20vorrei%20prenotare%20una%20visita%20presso%20lo%20Studio%20Dentistico%20Berruti" class="whatsapp">💬</a>
+
+<div class="bar">
+
+<a href="tel:0812132370" class="call">
+<img src="https://cdn-icons-png.flaticon.com/512/159/159832.png">Chiama
+</a>
+
+<a href="https://wa.me/393495000019?text=Ciao,%20vorrei%20prenotare%20una%20visita%20presso%20lo%20Studio%20Dentistico%20Berruti" class="wa">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">WhatsApp
+</a>
+
+<a href="https://www.instagram.com/studio_dentistico_berruti" class="ig">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">Instagram
+</a>
+
+</div>
+
+</body>
+</html>
