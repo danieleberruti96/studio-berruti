@@ -10,52 +10,7 @@ body{
 margin:0;
 font-family:Arial, sans-serif;
 color:#1f2937;
-scroll-behavior:smooth;
 background:white;
-}
-
-/* HEADER */
-.header{
-position:fixed;
-top:0;
-width:100%;
-background:white;
-box-shadow:0 2px 15px rgba(0,0,0,0.1);
-padding:10px 15px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:1000;
-}
-
-.header div{
-display:flex;
-gap:10px;
-}
-
-.header img{
-height:40px;
-}
-
-.header a{
-text-decoration:none;
-color:white;
-font-weight:bold;
-padding:8px 14px;
-border-radius:20px;
-font-size:14px;
-}
-
-.header a:nth-child(1){
-background:#0ea5e9;
-}
-
-.header a:nth-child(2){
-background:#25D366;
-}
-
-.header a:nth-child(3){
-background:#E1306C;
 }
 
 /* HERO */
@@ -64,8 +19,6 @@ height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-background:white;
-padding-top:60px;
 }
 
 .logo-hero{
@@ -83,61 +36,15 @@ to{opacity:1; transform:scale(1);}
 .section{
 padding:80px 20px;
 text-align:center;
+animation:fadeUp 1s ease;
 }
 
-.light{
-background:#f7fbff;
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
 }
 
-/* BOTTONI */
-.btn{
-display:inline-block;
-color:white;
-padding:14px 28px;
-border-radius:30px;
-text-decoration:none;
-margin:8px;
-font-weight:bold;
-font-size:16px;
-transition:0.3s;
-}
-
-.prenota{
-background:#0ea5e9;
-font-size:18px;
-padding:16px 32px;
-box-shadow:0 10px 25px rgba(14,165,233,0.4);
-animation:pulse 2s infinite;
-}
-
-.btn:hover{
-transform:scale(1.05);
-opacity:0.9;
-}
-
-.prenota:hover{
-transform:scale(1.08);
-box-shadow:0 15px 30px rgba(14,165,233,0.6);
-}
-
-.btn:active{
-transform:scale(0.95);
-}
-
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.05);}
-100%{transform:scale(1);}
-}
-
-/* GRIGLIA */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-max-width:1000px;
-margin:auto;
-}
+.light{background:#f7fbff;}
 
 /* CARD */
 .card{
@@ -156,10 +63,11 @@ box-shadow:0 6px 20px rgba(0,0,0,0.1);
 text-align:left;
 }
 
-/* IMMAGINI */
-.img-box img{
-width:100%;
-border-radius:15px;
+/* CTA */
+.cta{
+background:#0ea5e9;
+color:white;
+padding:60px 20px;
 }
 
 /* MAPPA */
@@ -199,18 +107,59 @@ margin:0 5px;
 color:white;
 text-decoration:none;
 font-weight:bold;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
 }
 
-.fixed-bar a:nth-child(1){
+/* colori */
+.call{background:#0ea5e9;}
+.wa{background:#25D366;}
+.ig{background:#E1306C;}
+
+.fixed-bar img{height:20px;}
+
+/* WHATSAPP PULSE */
+.wa{
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
+
+/* POPUP */
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:2000;
+}
+
+.popup-box{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+max-width:300px;
+}
+
+.popup button{
+margin-top:15px;
+padding:10px 20px;
+border:none;
 background:#0ea5e9;
-}
-
-.fixed-bar a:nth-child(2){
-background:#25D366;
-}
-
-.fixed-bar a:nth-child(3){
-background:#E1306C;
+color:white;
+border-radius:10px;
 }
 </style>
 
@@ -218,14 +167,18 @@ background:#E1306C;
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
-<img src="https://i.postimg.cc/50jt7NHd/DDCB61E7-85F7-4151-A2BE-DE45D729768C.png">
+<!-- POPUP -->
+<div class="popup" id="popup">
+<div class="popup-box">
+<h3>Prima visita?</h3>
+<p>Contattaci ora su WhatsApp</p>
 
-<div>
-<a href="tel:0812132370">Chiama</a>
-<a href="https://wa.me/393495000019">WhatsApp</a>
-<a href="https://www.instagram.com/studio_dentistico_berruti" target="_blank">Instagram</a>
+<a href="https://wa.me/393495000019?text=Ciao%20vorrei%20prenotare%20una%20visita" class="wa" style="padding:10px 20px; display:inline-block;">
+WhatsApp
+</a>
+
+<br>
+<button onclick="closePopup()">Chiudi</button>
 </div>
 </div>
 
@@ -237,41 +190,16 @@ background:#E1306C;
 <!-- TEAM -->
 <div class="section light">
 <h2>Il nostro team</h2>
-
-<div class="grid">
-<div class="img-box">
-<img src="https://i.postimg.cc/HxjLZsJ1/574C95F2-D707-4B16-AEF3-AB42E9CD72C5.png">
-</div>
-</div>
-
-<p style="max-width:700px;margin:20px auto;">
-Un team di professionisti dedicati alla salute e al benessere del paziente.
-</p>
+<div class="card">Professionisti qualificati e aggiornati.</div>
 </div>
 
 <!-- RECENSIONI -->
 <div class="section">
-<h2>Cosa dicono i nostri pazienti</h2>
+<h2>Recensioni</h2>
 
-<div class="grid">
-<div class="review">⭐⭐⭐⭐⭐<br>Professionalità e cortesia impeccabili.</div>
-<div class="review">⭐⭐⭐⭐⭐<br>Studio moderno e staff gentilissimo.</div>
-<div class="review">⭐⭐⭐⭐⭐<br>Mi sono sentito subito a mio agio.</div>
-</div>
-</div>
-
-<!-- SERVIZI -->
-<div class="section light">
-<h2>I Nostri Servizi</h2>
-
-<div class="grid">
-<div class="card"><b>Implantologia</b></div>
-<div class="card"><b>Ortodonzia</b></div>
-<div class="card"><b>Igiene dentale</b></div>
-<div class="card"><b>Estetica dentale</b></div>
-<div class="card"><b>Sbiancamento</b></div>
-<div class="card"><b>Medicina estetica</b></div>
-</div>
+<div class="review">⭐⭐⭐⭐⭐ Ottimo studio!</div>
+<div class="review">⭐⭐⭐⭐⭐ Staff gentilissimo</div>
+<div class="review">⭐⭐⭐⭐⭐ Super consigliato</div>
 </div>
 
 <!-- MAPPA -->
@@ -280,25 +208,35 @@ Un team di professionisti dedicati alla salute e al benessere del paziente.
 <iframe src="https://maps.google.com/maps?q=Studio%20Dentistico%20Berruti&output=embed"></iframe>
 </div>
 
-<!-- CONTATTI -->
-<div class="section">
-<h2>Prenota la tua visita</h2>
-<p>Via Pittore 117, San Giorgio a Cremano</p>
-<p>0812132370 | 3495000019</p>
-
-<a class="btn prenota" href="tel:0812132370">📞 Prenota Ora</a>
-</div>
-
 <footer>
 © Studio Dentistico Berruti
 </footer>
 
-<!-- BARRA FISSA -->
+<!-- BARRA -->
 <div class="fixed-bar">
-<a href="tel:0812132370">📞 Chiama</a>
-<a href="https://wa.me/393495000019">🟢 WhatsApp</a>
-<a href="https://www.instagram.com/studio_dentistico_berruti" target="_blank">📸 Instagram</a>
+
+<a href="tel:0812132370" class="call">
+<img src="https://cdn-icons-png.flaticon.com/512/159/159832.png">
+Chiama
+</a>
+
+<a href="https://wa.me/393495000019?text=Ciao%20vorrei%20prenotare%20una%20visita" class="wa">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+WhatsApp
+</a>
+
+<a href="https://www.instagram.com/studio_dentistico_berruti" target="_blank" class="ig">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+Instagram
+</a>
+
 </div>
+
+<script>
+function closePopup(){
+document.getElementById("popup").style.display="none";
+}
+</script>
 
 </body>
 </html>
