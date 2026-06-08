@@ -17,28 +17,224 @@
  "@context": "https://schema.org",
  "@type": "Dentist",
  "name": "Studio Dentistico Berruti",
- "image": "https://i.postimg.cc/50jt7NHd/DDCB61E7-85F7-4151-A2BE-DE45D729768C.png",
  "address": {
    "@type": "PostalAddress",
    "streetAddress": "Via Pittore 117",
    "addressLocality": "San Giorgio a Cremano",
    "addressRegion": "NA",
-   "postalCode": "80046",
    "addressCountry": "IT"
  },
- "telephone": "+390812132370",
- "areaServed": [
-   "San Giorgio a Cremano",
-   "Portici",
-   "Ercolano",
-   "Napoli"
- ]
+ "telephone": "+390812132370"
 }
 </script>
 
 <style>
 
-/* (TUTTO IL TUO CSS RESTA IDENTICO) */
+/* TUO CSS IDENTICO + micro miglioramenti */
+
+body{
+margin:0;
+font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+color:#1f2937;
+line-height:1.5;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+url("https://images.unsplash.com/photo-1588776814546-ec7e4c2e5f0b") center/cover no-repeat;
+color:white;
+}
+
+.logo{
+width:340px;
+max-width:80%;
+}
+
+h1{
+font-size:clamp(26px,5vw,38px);
+margin-top:20px;
+font-weight:600;
+}
+
+.hero p{
+color:#e5e7eb;
+font-size:clamp(14px,2.5vw,17px);
+margin:6px 0;
+}
+
+/* CTA */
+.cta{
+margin-top:25px;
+background:#25D366;
+color:white;
+padding:16px 34px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 8px 20px rgba(37,211,102,0.35);
+transition:0.25s;
+}
+
+.cta:hover{
+transform:scale(1.05);
+}
+
+/* BADGE */
+.badge{
+margin-top:-30px;
+text-align:center;
+}
+.badge span{
+background:white;
+padding:10px 20px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+font-size:14px;
+}
+
+/* SEZIONI */
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.light{
+background:#f7fbff;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+max-width:1100px;
+margin:auto;
+}
+
+/* CARD */
+.card{
+padding:28px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,0.06);
+background:white;
+transition:0.25s;
+font-size:15px;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+/* RECENSIONI */
+.review{
+min-width:280px;
+background:white;
+padding:22px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,0.06);
+text-align:left;
+line-height:1.6;
+}
+
+.stars{
+color:#facc15;
+margin:6px 0;
+font-size:14px;
+}
+
+/* SLIDER */
+.slider{
+overflow:hidden;
+margin-top:25px;
+}
+
+.slider-track{
+display:flex;
+gap:20px;
+animation:scroll 30s linear infinite;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+/* CTA FINALE */
+.cta-section{
+background:#0ea5e9;
+color:white;
+padding:70px 20px;
+}
+
+.cta-section a{
+background:white;
+color:#0ea5e9;
+padding:14px 26px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+margin-top:20px;
+display:inline-block;
+}
+
+/* MAPPA */
+iframe{
+width:100%;
+height:260px;
+border:0;
+border-radius:12px;
+}
+
+/* FLOAT */
+.whatsapp{
+position:fixed;
+bottom:90px;
+right:15px;
+background:#25D366;
+color:white;
+padding:14px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* BARRA */
+.bar{
+position:fixed;
+bottom:0;
+width:100%;
+display:flex;
+}
+
+.bar a{
+flex:1;
+padding:12px;
+text-align:center;
+color:white;
+text-decoration:none;
+font-weight:600;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:6px;
+font-size:14px;
+}
+
+.bar img{
+height:18px;
+}
+
+.call{background:#0ea5e9;}
+.wa{background:#25D366;}
+.ig{background:#E1306C;}
 
 </style>
 </head>
@@ -70,70 +266,30 @@ Prenota la tua prima visita
 <h2>Come possiamo aiutarti</h2>
 
 <div class="grid">
-
-<div class="card">
-<b>Implantologia</b><br>
-Sostituiamo denti mancanti in modo sicuro e naturale
-</div>
-
-<div class="card">
-<b>Ortodonzia</b><br>
-Allineiamo i denti per un sorriso armonioso
-</div>
-
-<div class="card">
-<b>Igiene dentale</b><br>
-Prevenzione e cura per denti sani nel tempo
-</div>
-
-<div class="card">
-<b>Estetica dentale</b><br>
-Migliora l’aspetto del tuo sorriso
-</div>
-
-<div class="card">
-<b>Sbiancamento</b><br>
-Denti più bianchi già dalle prime sedute
-</div>
-
-<div class="card">
-<b>Medicina estetica</b><br>
-Trattamenti per valorizzare il viso
+<div class="card"><b>Implantologia</b><br>Sostituiamo denti mancanti</div>
+<div class="card"><b>Ortodonzia</b><br>Allineiamo il tuo sorriso</div>
+<div class="card"><b>Igiene dentale</b><br>Prevenzione e cura</div>
+<div class="card"><b>Estetica dentale</b><br>Migliora il sorriso</div>
+<div class="card"><b>Sbiancamento</b><br>Denti più bianchi</div>
+<div class="card"><b>Medicina estetica</b><br>Valorizza il viso</div>
 </div>
 
 </div>
 
-</div>
-
-<!-- SEO ZONA (NUOVA SEZIONE) -->
+<!-- SEO ZONA -->
 <div class="section">
-
 <h2>Dentista a San Giorgio a Cremano</h2>
 
 <p style="max-width:700px;margin:auto;">
-Lo Studio Dentistico Berruti è un punto di riferimento a San Giorgio a Cremano per trattamenti di implantologia, ortodonzia e igiene dentale.
-<br><br>
-Riceviamo pazienti anche da Portici, Ercolano e Napoli offrendo cure moderne, sicure e personalizzate.
+Lo Studio Dentistico Berruti è un punto di riferimento a San Giorgio a Cremano.
+Riceviamo pazienti anche da Portici, Ercolano e Napoli.
 </p>
-
-</div>
-
-<!-- FIDUCIA -->
-<div class="section light">
-
-<h2>Perché scegliere noi</h2>
-
-<div class="grid">
-<div class="card">⭐ Oltre 50 recensioni reali positive</div>
-<div class="card">🦷 Tecnologie moderne e sicure</div>
-<div class="card">👨‍⚕️ Approccio umano e personalizzato</div>
-</div>
 
 </div>
 
 <!-- RECENSIONI -->
 <div class="section light">
-<h2>Cosa dicono i nostri pazienti</h2>
+<h2>Recensioni pazienti</h2>
 
 <div class="slider">
 <div class="slider-track">
@@ -147,13 +303,13 @@ Studio eccellente, professionalità e pulizia impeccabile.
 <div class="review">
 <b>Virginia Petagna</b>
 <div class="stars">★★★★★</div>
-Precisi, umani e disponibili. Mi sono sentita subito a mio agio.
+Precisi, umani e disponibili.
 </div>
 
 <div class="review">
 <b>Giovanni Mellino</b>
 <div class="stars">★★★★★</div>
-All’avanguardia e molto professionali. Consigliato.
+All’avanguardia e molto professionali.
 </div>
 
 </div>
@@ -180,7 +336,7 @@ All’avanguardia e molto professionali. Consigliato.
 <!-- CTA -->
 <div class="cta-section">
 <h2>Prenota la tua visita</h2>
-<p>Contattaci ora su WhatsApp per ricevere una risposta immediata</p>
+<p>Contattaci ora su WhatsApp per una risposta immediata</p>
 
 <a href="https://wa.me/393495000019?text=Ciao,%20vorrei%20prenotare%20una%20visita%20presso%20lo%20Studio%20Dentistico%20Berruti">
 Prenota su WhatsApp
