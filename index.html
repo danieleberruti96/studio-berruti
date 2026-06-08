@@ -2,24 +2,17 @@
 <html lang="it">
 <head>
 
-<!-- SEO BASE -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Dentista San Giorgio a Cremano | Studio Dentistico Berruti</title>
 
-<meta name="description" content="Studio Dentistico Berruti a San Giorgio a Cremano. Implantologia, estetica dentale, igiene e trattamenti professionali. Prenota ora la tua visita.">
+<meta name="description" content="Studio Dentistico Berruti a San Giorgio a Cremano. Implantologia, ortodonzia, igiene dentale e medicina estetica. Prenota ora la tua visita.">
 
-<meta name="keywords" content="dentista San Giorgio a Cremano, dentista Napoli, implantologia, sbiancamento denti, studio dentistico Berruti">
-
-<meta name="author" content="Studio Dentistico Berruti">
-
-<!-- GOOGLE ICON -->
 <link rel="icon" href="https://i.postimg.cc/50jt7NHd/DDCB61E7-85F7-4151-A2BE-DE45D729768C.png">
 
 <style>
 
-/* BASE */
 body{
 margin:0;
 font-family:Arial, sans-serif;
@@ -36,7 +29,7 @@ justify-content:center;
 }
 
 .logo-hero{
-width:450px;
+width:420px;
 max-width:85%;
 }
 
@@ -50,12 +43,27 @@ text-align:center;
 background:#f7fbff;
 }
 
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1000px;
+margin:auto;
+}
+
 /* CARD */
 .card{
 background:white;
 padding:25px;
 border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* IMMAGINI */
+.img-box img{
+width:100%;
+border-radius:15px;
 }
 
 /* RECENSIONI */
@@ -64,6 +72,9 @@ background:white;
 padding:20px;
 border-radius:12px;
 box-shadow:0 6px 20px rgba(0,0,0,0.1);
+text-align:left;
+font-size:15px;
+line-height:1.4;
 }
 
 /* CTA */
@@ -132,34 +143,79 @@ gap:8px;
 <img src="https://i.postimg.cc/50jt7NHd/DDCB61E7-85F7-4151-A2BE-DE45D729768C.png" class="logo-hero">
 </div>
 
-<!-- SERVIZI -->
-<div class="section light">
+<!-- SEO TEXT -->
+<div class="section">
 <h2>Dentista a San Giorgio a Cremano</h2>
 
-<div class="card">
-Implantologia, ortodonzia, igiene dentale, estetica dentale e medicina estetica.
+<p style="max-width:700px;margin:auto;">
+Lo Studio Dentistico Berruti offre trattamenti di implantologia, ortodonzia, igiene dentale ed estetica dentale a San Giorgio a Cremano.
+Riceviamo in Via Pittore 117.
+</p>
+</div>
+
+<!-- TEAM -->
+<div class="section light">
+<h2>Il nostro team</h2>
+
+<div class="grid">
+<div class="img-box">
+<img src="https://i.postimg.cc/HxjLZsJ1/574C95F2-D707-4B16-AEF3-AB42E9CD72C5.png">
 </div>
 </div>
 
-<!-- RECENSIONI -->
+<p style="max-width:700px;margin:20px auto;">
+Un team di professionisti dedicati alla salute e al benessere del paziente.
+</p>
+</div>
+
+<!-- SERVIZI -->
 <div class="section">
-<h2>Recensioni Pazienti</h2>
+<h2>I nostri servizi</h2>
 
-<div class="review">⭐⭐⭐⭐⭐ Studio eccellente, super consigliato</div>
-<div class="review">⭐⭐⭐⭐⭐ Staff professionale e gentile</div>
-<div class="review">⭐⭐⭐⭐⭐ Esperienza perfetta</div>
+<div class="grid">
+<div class="card"><b>Implantologia</b></div>
+<div class="card"><b>Ortodonzia</b></div>
+<div class="card"><b>Igiene dentale</b></div>
+<div class="card"><b>Estetica dentale</b></div>
+<div class="card"><b>Sbiancamento</b></div>
+<div class="card"><b>Medicina estetica</b></div>
+</div>
+</div>
+
+<!-- RECENSIONI REALISTICHE -->
+<div class="section light">
+<h2>Recensioni dei pazienti</h2>
+
+<div class="grid">
+
+<div class="review">
+⭐⭐⭐⭐⭐<br>
+Professionalità e cortesia. Studio moderno e molto pulito, mi sono trovato benissimo.
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐<br>
+Personale gentile e disponibile, trattamenti spiegati in modo chiaro. Consigliato.
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐<br>
+Ottima esperienza, grande attenzione al paziente e risultati eccellenti.
+</div>
+
+</div>
+</div>
+
+<!-- MAPPA -->
+<div class="section">
+<h2>Dove Siamo</h2>
+<iframe src="https://maps.google.com/maps?q=Studio%20Dentistico%20Berruti&output=embed"></iframe>
 </div>
 
 <!-- CTA -->
 <div class="cta">
 <h2>Prenota la tua visita</h2>
-<p>Contattaci ora</p>
-</div>
-
-<!-- MAPPA -->
-<div class="section light">
-<h2>Dove Siamo</h2>
-<iframe src="https://maps.google.com/maps?q=Studio%20Dentistico%20Berruti&output=embed"></iframe>
+<p>Contattaci ora per fissare un appuntamento</p>
 </div>
 
 <footer>
