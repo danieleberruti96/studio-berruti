@@ -91,12 +91,17 @@ max-width:1000px;
 margin:auto;
 }
 
-/* CARD */
+/* CARD PREMIUM */
 .card{
 background:white;
 padding:25px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+border-radius:18px;
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 /* IMMAGINI */
@@ -183,17 +188,28 @@ gap:8px;
 }
 
 .call{background:#0ea5e9;}
-.wa{background:#25D366;}
+
+.wa{
+background:#25D366;
+animation:pulse 2s infinite;
+}
+
 .ig{background:#E1306C;}
 
 .fixed-bar img{height:20px;}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
 
 </style>
 </head>
 
 <body>
 
-<!-- HERO PREMIUM -->
+<!-- HERO -->
 <div class="hero">
 
 <img src="https://i.postimg.cc/50jt7NHd/DDCB61E7-85F7-4151-A2BE-DE45D729768C.png" class="logo-hero">
@@ -201,6 +217,7 @@ gap:8px;
 <h1>Studio Dentistico Berruti</h1>
 
 <p>Dentista a San Giorgio a Cremano • 53 recensioni ⭐⭐⭐⭐⭐</p>
+<p style="font-size:14px;">Studio tra i più recensiti della zona</p>
 
 <a href="https://wa.me/393495000019?text=Ciao%20vorrei%20prenotare%20una%20visita" class="cta-hero">
 Prenota su WhatsApp
@@ -208,9 +225,24 @@ Prenota su WhatsApp
 
 </div>
 
+<!-- PRIMA VISITA -->
+<div class="section">
+
+<h2>Prima visita</h2>
+
+<p style="max-width:700px;margin:auto;">
+Valutazione completa del tuo sorriso con piano di trattamento personalizzato.
+</p>
+
+<a href="https://wa.me/393495000019?text=Ciao%20vorrei%20prenotare%20una%20prima%20visita"
+style="margin-top:20px; display:inline-block; background:#25D366; color:white; padding:14px 30px; border-radius:30px; text-decoration:none; font-weight:bold;">
+Prenota la tua prima visita
+</a>
+
+</div>
+
 <!-- FIDUCIA -->
 <div class="section light">
-
 <h2>Perché scegliere noi</h2>
 
 <div class="grid">
@@ -218,32 +250,6 @@ Prenota su WhatsApp
 <div class="card">🦷 Tecnologie moderne</div>
 <div class="card">👨‍⚕️ Approccio personalizzato</div>
 </div>
-
-</div>
-
-<!-- SEO TEXT -->
-<div class="section">
-<h2>Dentista a San Giorgio a Cremano</h2>
-
-<p style="max-width:700px;margin:auto;">
-Lo Studio Dentistico Berruti offre trattamenti di implantologia, ortodonzia, igiene dentale ed estetica dentale a San Giorgio a Cremano.
-Riceviamo in Via Pittore 117.
-</p>
-</div>
-
-<!-- TEAM -->
-<div class="section light">
-<h2>Il nostro team</h2>
-
-<div class="grid">
-<div class="img-box">
-<img src="https://i.postimg.cc/HxjLZsJ1/574C95F2-D707-4B16-AEF3-AB42E9CD72C5.png">
-</div>
-</div>
-
-<p style="max-width:700px;margin:20px auto;">
-Un team di professionisti dedicati alla salute e al benessere del paziente.
-</p>
 </div>
 
 <!-- SERVIZI -->
@@ -260,38 +266,44 @@ Un team di professionisti dedicati alla salute e al benessere del paziente.
 </div>
 </div>
 
+<!-- PROBLEMI -->
+<div class="section light">
+
+<h2>Hai uno di questi problemi?</h2>
+
+<div class="grid">
+<div class="card">Denti mancanti o mobili</div>
+<div class="card">Denti storti o disallineati</div>
+<div class="card">Macchie o denti ingialliti</div>
+<div class="card">Dolore o fastidio ai denti</div>
+</div>
+
+<p style="margin-top:20px;">Abbiamo la soluzione adatta a te.</p>
+
+</div>
+
+<!-- TEAM -->
+<div class="section">
+<h2>Il nostro team</h2>
+
+<div class="grid">
+<div class="img-box">
+<img src="https://i.postimg.cc/HxjLZsJ1/574C95F2-D707-4B16-AEF3-AB42E9CD72C5.png">
+</div>
+</div>
+</div>
+
 <!-- RECENSIONI -->
 <div class="section light">
 <h2>Recensioni dei pazienti</h2>
 
 <div class="grid">
 
-<div class="review">
-<b>Giuseppe A.</b><br>
-⭐⭐⭐⭐⭐<br>
-Studio eccellente, professionalità e cortesia.
-</div>
-
-<div class="review">
-<b>Maria L.</b><br>
-⭐⭐⭐⭐⭐<br>
-Personale gentile e disponibile, esperienza positiva.
-</div>
-
-<div class="review">
-<b>Antonio R.</b><br>
-⭐⭐⭐⭐⭐<br>
-Grande attenzione al paziente, consigliato.
-</div>
+<div class="review"><b>Giuseppe A.</b><br>⭐⭐⭐⭐⭐<br>Studio eccellente</div>
+<div class="review"><b>Maria L.</b><br>⭐⭐⭐⭐⭐<br>Esperienza positiva</div>
+<div class="review"><b>Antonio R.</b><br>⭐⭐⭐⭐⭐<br>Consigliato</div>
 
 </div>
-
-<p>
-<a href="TUO_LINK_GOOGLE" target="_blank" style="color:#0ea5e9; font-weight:bold;">
-Leggi tutte le recensioni su Google
-</a>
-</p>
-
 </div>
 
 <!-- CONTATTI -->
@@ -299,7 +311,7 @@ Leggi tutte le recensioni su Google
 <h2>Contatti</h2>
 
 <div class="contatti">
-📍 Via Pittore 117, San Giorgio a Cremano<br>
+📍 Via Pittore 117<br>
 📞 081 213 2370<br>
 📱 349 5000019
 </div>
@@ -315,12 +327,7 @@ Leggi tutte le recensioni su Google
 <!-- CTA -->
 <div class="cta">
 <h2>Prenota la tua visita</h2>
-<p>Contattaci ora per una consulenza immediata</p>
-
-<a href="https://wa.me/393495000019?text=Ciao%20vorrei%20prenotare%20una%20visita">
-Prenota su WhatsApp
-</a>
-
+<a href="https://wa.me/393495000019">Prenota su WhatsApp</a>
 </div>
 
 <footer>
@@ -330,20 +337,9 @@ Prenota su WhatsApp
 <!-- BARRA -->
 <div class="fixed-bar">
 
-<a href="tel:0812132370" class="call">
-<img src="https://cdn-icons-png.flaticon.com/512/159/159832.png">
-Chiama
-</a>
-
-<a href="https://wa.me/393495000019?text=Ciao%20vorrei%20prenotare%20una%20visita" class="wa">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-WhatsApp
-</a>
-
-<a href="https://www.instagram.com/studio_dentistico_berruti" target="_blank" class="ig">
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-Instagram
-</a>
+<a href="tel:0812132370" class="call">Chiama</a>
+<a href="https://wa.me/393495000019" class="wa">WhatsApp</a>
+<a href="https://www.instagram.com/studio_dentistico_berruti" class="ig">Instagram</a>
 
 </div>
 
