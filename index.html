@@ -19,16 +19,43 @@ font-family:Arial, sans-serif;
 color:#1f2937;
 }
 
-/* HERO */
+/* HERO WOW */
 .hero{
 height:100vh;
+position:relative;
 display:flex;
-flex-direction:column;
 align-items:center;
 justify-content:center;
 text-align:center;
+overflow:hidden;
+}
+
+/* SFONDO */
+.hero::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background: url("https://images.unsplash.com/photo-1588776814546-ec7e4c2e5f0b") center/cover no-repeat;
+z-index:0;
+}
+
+/* OVERLAY */
+.hero-overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+z-index:1;
+}
+
+/* CONTENUTO */
+.hero-content{
+position:relative;
+z-index:2;
+color:white;
 padding:20px;
-animation:fadeIn 1s ease;
+animation:fadeIn 1.2s ease;
 }
 
 .logo{
@@ -36,13 +63,19 @@ width:380px;
 max-width:85%;
 }
 
-h1{
-font-size:32px;
+.hero-content h1{
+font-size:34px;
 margin-top:20px;
 }
 
-.hero p{
-color:#6b7280;
+.hero-sub{
+font-size:18px;
+margin-top:10px;
+}
+
+.hero-small{
+font-size:14px;
+opacity:0.85;
 }
 
 /* CTA */
@@ -108,7 +141,7 @@ background:white;
 transform:translateY(-8px);
 }
 
-/* RECENSIONI SLIDER */
+/* RECENSIONI */
 .slider{
 overflow:hidden;
 margin-top:20px;
@@ -217,19 +250,26 @@ to{opacity:1;}
 
 <body>
 
-<!-- HERO -->
+<!-- HERO WOW -->
 <div class="hero">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
 
 <img src="https://i.postimg.cc/50jt7NHd/DDCB61E7-85F7-4151-A2BE-DE45D729768C.png" class="logo">
 
 <h1>Studio Dentistico Berruti</h1>
 
-<p>Dentista a San Giorgio a Cremano</p>
-<p>⭐ 53 recensioni reali su Google</p>
+<p class="hero-sub">Sorrisi sani, naturali e duraturi</p>
+
+<p class="hero-small">Dentista a San Giorgio a Cremano • ⭐ 53 recensioni reali</p>
 
 <a href="https://wa.me/393495000019?text=Vorrei prenotare una visita" class="cta">
 Prenota la tua prima visita
 </a>
+
+</div>
 
 </div>
 
@@ -287,12 +327,6 @@ All’avanguardia e molto professionali.
 Gentilezza e competenza ai massimi livelli.
 </div>
 
-<div class="review">
-<b>Mattia Esposito</b>
-<div class="stars">★★★★★</div>
-Studio eccellente, professionalità e pulizia impeccabile.
-</div>
-
 </div>
 </div>
 
@@ -327,7 +361,7 @@ Studio eccellente, professionalità e pulizia impeccabile.
 <!-- FLOAT -->
 <a href="https://wa.me/393495000019" class="whatsapp">💬</a>
 
-<!-- BARRA CON ICONE VERE -->
+<!-- BARRA -->
 <div class="bar">
 
 <a href="tel:0812132370" class="call">
@@ -349,7 +383,6 @@ Instagram
 
 <script>
 
-/* animazioni scroll */
 const sections = document.querySelectorAll('.section');
 
 window.addEventListener('scroll', () => {
