@@ -30,8 +30,6 @@
 
 <style>
 
-/* TUO CSS IDENTICO + micro miglioramenti */
-
 body{
 margin:0;
 font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
@@ -39,7 +37,7 @@ color:#1f2937;
 line-height:1.5;
 }
 
-/* HERO */
+/* HERO (ORA COERENTE E PULITO) */
 .hero{
 height:100vh;
 display:flex;
@@ -48,9 +46,8 @@ align-items:center;
 justify-content:center;
 text-align:center;
 padding:20px;
-background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-url("https://images.unsplash.com/photo-1588776814546-ec7e4c2e5f0b") center/cover no-repeat;
-color:white;
+background: linear-gradient(180deg,#f7fbff 0%, #ffffff 100%);
+color:#1f2937;
 }
 
 .logo{
@@ -65,7 +62,7 @@ font-weight:600;
 }
 
 .hero p{
-color:#e5e7eb;
+color:#4b5563;
 font-size:clamp(14px,2.5vw,17px);
 margin:6px 0;
 }
@@ -167,22 +164,21 @@ animation:scroll 30s linear infinite;
 100%{transform:translateX(-50%);}
 }
 
-/* CTA FINALE */
+/* CTA FINALE (MIGLIORATA) */
 .cta-section{
 background:#0ea5e9;
 color:white;
-padding:70px 20px;
+padding:80px 20px;
 }
 
-.cta-section a{
-background:white;
-color:#0ea5e9;
-padding:14px 26px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
+.cta-section p{
+max-width:600px;
+margin:auto;
+}
+
+.cta-section .info{
 margin-top:20px;
-display:inline-block;
+line-height:1.6;
 }
 
 /* MAPPA */
@@ -248,7 +244,7 @@ height:18px;
 
 <h1>Studio Dentistico Berruti</h1>
 
-<p><b>Torna a sorridere senza dolore e con sicurezza</b></p>
+<p><b>Sorrisi sani, naturali e duraturi</b></p>
 <p>⭐ 53 recensioni reali su Google • Tra i più recensiti a San Giorgio</p>
 
 <a href="https://wa.me/393495000019?text=Ciao,%20vorrei%20prenotare%20una%20visita%20presso%20lo%20Studio%20Dentistico%20Berruti" class="cta">
@@ -290,6 +286,13 @@ Riceviamo pazienti anche da Portici, Ercolano e Napoli.
 <!-- RECENSIONI -->
 <div class="section light">
 <h2>Recensioni pazienti</h2>
+
+<p>
+<a href="https://www.google.com/search?q=Studio+Dentistico+Berruti+recensioni" target="_blank"
+style="background:#0ea5e9;color:white;padding:10px 20px;border-radius:20px;text-decoration:none;font-weight:bold;">
+Leggi tutte le recensioni su Google
+</a>
+</p>
 
 <div class="slider">
 <div class="slider-track">
@@ -333,14 +336,19 @@ All’avanguardia e molto professionali.
 <iframe src="https://maps.google.com/maps?q=Studio%20Dentistico%20Berruti&output=embed"></iframe>
 </div>
 
-<!-- CTA -->
+<!-- CTA FINALE MIGLIORATA -->
 <div class="cta-section">
-<h2>Prenota la tua visita</h2>
-<p>Contattaci ora su WhatsApp per una risposta immediata</p>
+<h2>Studio Dentistico Berruti</h2>
 
-<a href="https://wa.me/393495000019?text=Ciao,%20vorrei%20prenotare%20una%20visita%20presso%20lo%20Studio%20Dentistico%20Berruti">
-Prenota su WhatsApp
-</a>
+<p>
+Ci prendiamo cura del tuo sorriso con professionalità, attenzione e tecnologie moderne.
+</p>
+
+<div class="info">
+📍 Via Pittore 117<br>
+📞 081 213 2370<br>
+🕒 Riceviamo su appuntamento
+</div>
 
 </div>
 
